@@ -43,9 +43,23 @@ namespace PPT.Forms
         }
         private void ZonaResultados_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Resultados en desarrollo.\n\nAprendizajes actuales: " +
-                contexto.Historial.Cantidad);
+            int[,] matriz = contexto.Markov.ObtenerMatrizTransiciones();
+
+            string texto =
+                "        Piedra  Papel  Tijera\n" +
+                "Piedra     " + matriz[0, 0] + "        " +
+                                 matriz[0, 1] + "        " +
+                                 matriz[0, 2] + "\n" +
+
+                "Papel      " + matriz[1, 0] + "        " +
+                                 matriz[1, 1] + "        " +
+                                 matriz[1, 2] + "\n" +
+
+                "Tijera     " + matriz[2, 0] + "        " +
+                                 matriz[2, 1] + "        " +
+                                 matriz[2, 2];
+
+            MessageBox.Show(texto);
         }
         private void ZonaSalirMenu_Click(object sender, EventArgs e)
         {

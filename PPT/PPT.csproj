@@ -60,6 +60,7 @@
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\HistorialAprendizaje.cs" />
+    <Compile Include="Logica\ModeloMarkov.cs" />
     <Compile Include="Modelos\EstadoBatalla.cs" />
     <Compile Include="Modelos\Jugada.cs" />
     <Compile Include="Modelos\ModoBatalla.cs" />
