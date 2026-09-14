@@ -42,5 +42,14 @@ namespace PPT
         {
             return new List<Ronda>(rondas);
         }
+        public Jugada? ObtenerUltimaJugada()
+        {
+            if (rondas.Count == 0)
+            {
+                return null;
+            }
+
+            return rondas[rondas.Count - 1].Jugador;
+        }
     }
 }

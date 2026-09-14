@@ -43,21 +43,25 @@ namespace PPT.Forms
         }
         private void ZonaResultados_Click(object sender, EventArgs e)
         {
-            int[,] matriz = contexto.Markov.ObtenerMatrizTransiciones();
+            double[,] matriz =
+                contexto.Markov.ObtenerMatrizProbabilidades();
 
             string texto =
-                "        Piedra  Papel  Tijera\n" +
-                "Piedra     " + matriz[0, 0] + "        " +
-                                 matriz[0, 1] + "        " +
-                                 matriz[0, 2] + "\n" +
+                "              Piedra   Papel   Tijera\n" +
+                "Piedra     " +
+                matriz[0, 0].ToString("P2") + "   " +
+                matriz[0, 1].ToString("P2") + "   " +
+                matriz[0, 2].ToString("P2") + "\n" +
 
-                "Papel      " + matriz[1, 0] + "        " +
-                                 matriz[1, 1] + "        " +
-                                 matriz[1, 2] + "\n" +
+                "Papel       " +
+                matriz[1, 0].ToString("P2") + "   " +
+                matriz[1, 1].ToString("P2") + "   " +
+                matriz[1, 2].ToString("P2") + "\n" +
 
-                "Tijera     " + matriz[2, 0] + "        " +
-                                 matriz[2, 1] + "        " +
-                                 matriz[2, 2];
+                "Tijera      " +
+                matriz[2, 0].ToString("P2") + "   " +
+                matriz[2, 1].ToString("P2") + "   " +
+                matriz[2, 2].ToString("P2");
 
             MessageBox.Show(texto);
         }

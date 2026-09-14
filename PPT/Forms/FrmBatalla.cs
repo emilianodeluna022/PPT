@@ -83,9 +83,10 @@ namespace PPT
             HabilitarJugadas(false);
 
             Jugada ia = MovimientoIA();
-            ResultadoRonda resultado = VerificarGanador(jugador, ia);
 
-            
+            ResultadoRonda resultado =
+                VerificarGanador(jugador, ia);
+
             Ronda ronda = new Ronda();
 
             ronda.Jugador = jugador;
@@ -96,6 +97,7 @@ namespace PPT
             contexto.Historial.Registrar(ronda);
 
             estadoActual = EstadoBatalla.MostrarSeleccion;
+
             MostrarEstadoVisual();
             MostrarSeleccionIA(ia);
 
@@ -104,7 +106,15 @@ namespace PPT
 
         private Jugada MovimientoIA()
         {
-            return (Jugada)rnd.Next(1, 4);
+            if (modoActual == ModoBatalla.Entrenamiento)
+            {
+                return (Jugada)rnd.Next(1, 4);
+            }
+
+            Jugada prediccion =
+                contexto.Markov.PredecirSiguiente();
+
+            return Contrarrestar(prediccion);
         }
 
         private ResultadoRonda VerificarGanador(Jugada jugador, Jugada ia)
@@ -159,6 +169,20 @@ namespace PPT
             picZonaFuego.Enabled = habilitar;
             picZonaAgua.Enabled = habilitar;
             picZonaPlanta.Enabled = habilitar;
+        }
+        private Jugada Contrarrestar(Jugada prediccion)
+        {
+            if (prediccion == Jugada.Piedra)
+            {
+                return Jugada.Papel;
+            }
+
+            if (prediccion == Jugada.Papel)
+            {
+                return Jugada.Tijera;
+            }
+
+            return Jugada.Piedra;
         }
     }
 }
