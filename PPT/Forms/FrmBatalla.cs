@@ -94,12 +94,7 @@ namespace PPT
             ronda.Modo = modoActual;
 
             contexto.Historial.Registrar(ronda);
-            List<Jugada> vector = contexto.Historial.ObtenerVector();
 
-            Text = "Aprendizajes: " +
-                   contexto.Historial.Cantidad +
-                   " | Última: " +
-                   jugador;
             estadoActual = EstadoBatalla.MostrarSeleccion;
             MostrarEstadoVisual();
             MostrarSeleccionIA(ia);
