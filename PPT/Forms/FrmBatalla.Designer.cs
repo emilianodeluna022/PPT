@@ -28,57 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPiedra = new System.Windows.Forms.Button();
-            this.btnPapel = new System.Windows.Forms.Button();
-            this.btnTijera = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.pnlEscena = new System.Windows.Forms.Panel();
+            this.picSeleccionIA = new System.Windows.Forms.PictureBox();
+            this.picZonaSalir = new System.Windows.Forms.PictureBox();
+            this.picZonaPlanta = new System.Windows.Forms.PictureBox();
+            this.picZonaAgua = new System.Windows.Forms.PictureBox();
+            this.picZonaFuego = new System.Windows.Forms.PictureBox();
+            this.tmrRonda = new System.Windows.Forms.Timer(this.components);
+            this.pnlEscena.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSeleccionIA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaPlanta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaAgua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaFuego)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // pnlEscena
             // 
-            this.btnPiedra.Location = new System.Drawing.Point(365, 157);
-            this.btnPiedra.Name = "button1";
-            this.btnPiedra.Size = new System.Drawing.Size(75, 23);
-            this.btnPiedra.TabIndex = 1;
-            this.btnPiedra.Text = "PIEDRA";
-            this.btnPiedra.UseVisualStyleBackColor = true;
+            this.pnlEscena.BackgroundImage = global::PPT.Properties.Resources.BatallaJuegoSeleccion;
+            this.pnlEscena.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlEscena.Controls.Add(this.picSeleccionIA);
+            this.pnlEscena.Controls.Add(this.picZonaSalir);
+            this.pnlEscena.Controls.Add(this.picZonaPlanta);
+            this.pnlEscena.Controls.Add(this.picZonaAgua);
+            this.pnlEscena.Controls.Add(this.picZonaFuego);
+            this.pnlEscena.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlEscena.Location = new System.Drawing.Point(0, 0);
+            this.pnlEscena.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlEscena.Name = "pnlEscena";
+            this.pnlEscena.Size = new System.Drawing.Size(884, 511);
+            this.pnlEscena.TabIndex = 5;
             // 
-            // button2
+            // picSeleccionIA
             // 
-            this.btnPapel.Location = new System.Drawing.Point(365, 201);
-            this.btnPapel.Name = "button2";
-            this.btnPapel.Size = new System.Drawing.Size(75, 23);
-            this.btnPapel.TabIndex = 3;
-            this.btnPapel.Text = "PAPEL";
-            this.btnPapel.UseVisualStyleBackColor = true;
+            this.picSeleccionIA.BackColor = System.Drawing.Color.Transparent;
+            this.picSeleccionIA.Location = new System.Drawing.Point(302, 404);
+            this.picSeleccionIA.Name = "picSeleccionIA";
+            this.picSeleccionIA.Size = new System.Drawing.Size(70, 70);
+            this.picSeleccionIA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSeleccionIA.TabIndex = 4;
+            this.picSeleccionIA.TabStop = false;
+            this.picSeleccionIA.Visible = false;
             // 
-            // button3
+            // picZonaSalir
             // 
-            this.btnTijera.Location = new System.Drawing.Point(365, 244);
-            this.btnTijera.Name = "button3";
-            this.btnTijera.Size = new System.Drawing.Size(75, 23);
-            this.btnTijera.TabIndex = 4;
-            this.btnTijera.Text = "TIJERA";
-            this.btnTijera.UseVisualStyleBackColor = true;
+            this.picZonaSalir.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaSalir.Location = new System.Drawing.Point(447, 386);
+            this.picZonaSalir.Name = "picZonaSalir";
+            this.picZonaSalir.Size = new System.Drawing.Size(201, 50);
+            this.picZonaSalir.TabIndex = 3;
+            this.picZonaSalir.TabStop = false;
             // 
-            // Form1
+            // picZonaPlanta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.picZonaPlanta.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaPlanta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaPlanta.Location = new System.Drawing.Point(447, 449);
+            this.picZonaPlanta.Name = "picZonaPlanta";
+            this.picZonaPlanta.Size = new System.Drawing.Size(201, 50);
+            this.picZonaPlanta.TabIndex = 2;
+            this.picZonaPlanta.TabStop = false;
+            // 
+            // picZonaAgua
+            // 
+            this.picZonaAgua.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaAgua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaAgua.Location = new System.Drawing.Point(665, 449);
+            this.picZonaAgua.Name = "picZonaAgua";
+            this.picZonaAgua.Size = new System.Drawing.Size(195, 50);
+            this.picZonaAgua.TabIndex = 1;
+            this.picZonaAgua.TabStop = false;
+            // 
+            // picZonaFuego
+            // 
+            this.picZonaFuego.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaFuego.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaFuego.Location = new System.Drawing.Point(665, 386);
+            this.picZonaFuego.Name = "picZonaFuego";
+            this.picZonaFuego.Size = new System.Drawing.Size(195, 50);
+            this.picZonaFuego.TabIndex = 0;
+            this.picZonaFuego.TabStop = false;
+            // 
+            // tmrRonda
+            // 
+            this.tmrRonda.Interval = 2500;
+            this.tmrRonda.Tick += new System.EventHandler(this.tmrRonda_Tick);
+            // 
+            // FrmBatalla
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnTijera);
-            this.Controls.Add(this.btnPapel);
-            this.Controls.Add(this.btnPiedra);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.pnlEscena);
+            this.MinimumSize = new System.Drawing.Size(900, 550);
+            this.Name = "FrmBatalla";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmBatalla";
+            this.pnlEscena.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picSeleccionIA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaPlanta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaAgua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaFuego)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnPiedra;
-        private System.Windows.Forms.Button btnPapel;
-        private System.Windows.Forms.Button btnTijera;
+        private System.Windows.Forms.Panel pnlEscena;
+        private System.Windows.Forms.PictureBox picZonaSalir;
+        private System.Windows.Forms.PictureBox picZonaPlanta;
+        private System.Windows.Forms.PictureBox picZonaAgua;
+        private System.Windows.Forms.PictureBox picZonaFuego;
+        private System.Windows.Forms.PictureBox picSeleccionIA;
+        private System.Windows.Forms.Timer tmrRonda;
     }
 }
 

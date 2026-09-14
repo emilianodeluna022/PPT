@@ -6,29 +6,87 @@ namespace PPT
     public partial class FrmBatalla : Form
     {
         Random rnd = new Random();
-        public FrmBatalla()
+        private ModoBatalla modoActual;
+        private EstadoBatalla estadoActual;
+        public FrmBatalla() : this(ModoBatalla.Juego)
+        {
+        }
+
+        public FrmBatalla(ModoBatalla modoRecibido)
         {
             InitializeComponent();
-            
-            int jugador = 0;
-            int ia = 0;
-            bool resultado = false;
-            int jugar = 0;
-            
-            btnPiedra.Tag = Jugada.Piedra;
-            btnPapel.Tag = Jugada.Papel;
-            btnTijera.Tag = Jugada.Tijera;
 
-            btnPiedra.Click += BotonJugada_Click;
-            btnPapel.Click += BotonJugada_Click;
-            btnTijera.Click += BotonJugada_Click;
+            modoActual = modoRecibido;
+            estadoActual = EstadoBatalla.TurnoJugador;
 
+            MostrarEstadoVisual();
+            picZonaFuego.Tag = Jugada.Piedra;
+            picZonaAgua.Tag = Jugada.Papel;
+            picZonaPlanta.Tag = Jugada.Tijera;
+
+            picZonaFuego.Click += ZonaJugada_Click;
+            picZonaAgua.Click += ZonaJugada_Click;
+            picZonaPlanta.Click += ZonaJugada_Click;
+            picZonaSalir.Click += ZonaSalir_Click;
+        }
+        private void MostrarEstadoVisual()
+        {
+            if (estadoActual == EstadoBatalla.TurnoJugador)
+            {
+                picSeleccionIA.Visible = false;
+            }
+            if (modoActual == ModoBatalla.Juego)
+            {
+                if (estadoActual == EstadoBatalla.TurnoJugador)
+                {
+                    pnlEscena.BackgroundImage =
+                        Properties.Resources.BatallaJuegoTurno;
+                }
+                else
+                {
+                    pnlEscena.BackgroundImage =
+                        Properties.Resources.BatallaJuegoSeleccion;
+                }
+            }
+            else
+            {
+                if (estadoActual == EstadoBatalla.TurnoJugador)
+                {
+                    pnlEscena.BackgroundImage =
+                        Properties.Resources.BatallaEntrenamientoTurno;
+                }
+                else
+                {
+                    pnlEscena.BackgroundImage =
+                        Properties.Resources.BatallaEntrenamientoSeleccion;
+                }
+            }
+        }
+        private void ZonaJugada_Click(object sender, EventArgs e)
+        {
+            PictureBox zonaPresionada = (PictureBox)sender;
+            Jugada jugador = (Jugada)zonaPresionada.Tag;
+
+            JugarRonda(jugador);
+        }
+
+        private void ZonaSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void JugarRonda(Jugada jugador)
         {
+            HabilitarJugadas(false);
+
             Jugada ia = MovimientoIA();
-            VerificarGanador(jugador, ia);
+            ResultadoRonda resultado = VerificarGanador(jugador, ia);
+
+            estadoActual = EstadoBatalla.MostrarSeleccion;
+            MostrarEstadoVisual();
+            MostrarSeleccionIA(ia);
+
+            tmrRonda.Start();
         }
 
         private Jugada MovimientoIA()
@@ -36,42 +94,58 @@ namespace PPT
             return (Jugada)rnd.Next(1, 4);
         }
 
-        private void VerificarGanador(Jugada jugador, Jugada ia)
+        private ResultadoRonda VerificarGanador(Jugada jugador, Jugada ia)
         {
             if (jugador == ia)
             {
-                MessageBox.Show(
-                    "EMPATE\n\n" +
-                    "Tú: " + jugador +
-                    "\nIA: " + ia);
-
-                return;
+                return ResultadoRonda.Empate;
             }
 
             if ((jugador == Jugada.Piedra && ia == Jugada.Tijera) ||
                 (jugador == Jugada.Papel && ia == Jugada.Piedra) ||
                 (jugador == Jugada.Tijera && ia == Jugada.Papel))
             {
-                MessageBox.Show(
-                    "GANASTE\n\n" +
-                    "Tú: " + jugador +
-                    "\nIA: " + ia);
-
-                return;
+                return ResultadoRonda.GanaJugador;
             }
 
-            MessageBox.Show(
-                "PERDISTE\n\n" +
-                "Tú: " + jugador +
-                "\nIA: " + ia);
+            return ResultadoRonda.GanaIA;
+        }
+        private void MostrarSeleccionIA(Jugada ia)
+        {
+            if (ia == Jugada.Piedra)
+            {
+                picSeleccionIA.Image =
+                    Properties.Resources.SeleccionFuego;
+            }
+            else if (ia == Jugada.Papel)
+            {
+                picSeleccionIA.Image =
+                    Properties.Resources.SeleccionAgua;
+            }
+            else
+            {
+                picSeleccionIA.Image =
+                    Properties.Resources.SeleccionPlanta;
+            }
+
+            picSeleccionIA.Visible = true;
         }
 
-        private void BotonJugada_Click(object sender, EventArgs e)
+        private void tmrRonda_Tick(object sender, EventArgs e)
         {
-            Button botonPresionado = (Button)sender;
-            Jugada jugador = (Jugada)botonPresionado.Tag;
+            tmrRonda.Stop();
 
-            JugarRonda(jugador);
+            estadoActual = EstadoBatalla.TurnoJugador;
+
+            MostrarEstadoVisual();
+
+            HabilitarJugadas(true);
+        }
+        private void HabilitarJugadas(bool habilitar)
+        {
+            picZonaFuego.Enabled = habilitar;
+            picZonaAgua.Enabled = habilitar;
+            picZonaPlanta.Enabled = habilitar;
         }
     }
 }

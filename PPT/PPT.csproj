@@ -52,7 +52,10 @@
     <Compile Include="Forms\FrmBatalla.Designer.cs">
       <DependentUpon>FrmBatalla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\EstadoBatalla.cs" />
     <Compile Include="Modelos\Jugada.cs" />
+    <Compile Include="Modelos\ModoBatalla.cs" />
+    <Compile Include="Modelos\ResultadoRonda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmBatalla.resx">
@@ -66,6 +69,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
