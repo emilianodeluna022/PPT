@@ -43,27 +43,11 @@ namespace PPT.Forms
         }
         private void ZonaResultados_Click(object sender, EventArgs e)
         {
-            double[,] matriz =
-                contexto.Markov.ObtenerMatrizProbabilidades();
+            using (FrmResultados resultados = new FrmResultados(contexto))
 
-            string texto =
-                "              Piedra   Papel   Tijera\n" +
-                "Piedra     " +
-                matriz[0, 0].ToString("P2") + "   " +
-                matriz[0, 1].ToString("P2") + "   " +
-                matriz[0, 2].ToString("P2") + "\n" +
-
-                "Papel       " +
-                matriz[1, 0].ToString("P2") + "   " +
-                matriz[1, 1].ToString("P2") + "   " +
-                matriz[1, 2].ToString("P2") + "\n" +
-
-                "Tijera      " +
-                matriz[2, 0].ToString("P2") + "   " +
-                matriz[2, 1].ToString("P2") + "   " +
-                matriz[2, 2].ToString("P2");
-
-            MessageBox.Show(texto);
+            {
+                resultados.ShowDialog();
+            }
         }
         private void ZonaSalirMenu_Click(object sender, EventArgs e)
         {
