@@ -15,6 +15,7 @@ namespace PPT
         Random rnd = new Random();
         public Form1()
         {
+            //Prueba de cambio en rama v0.02
             InitializeComponent();
             
             int jugador = 0;
