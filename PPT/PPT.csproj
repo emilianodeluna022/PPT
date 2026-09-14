@@ -60,6 +60,13 @@
     <Compile Include="Forms\FrmMenuPrincipal.Designer.cs">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmResultados.Designer.cs">
+      <DependentUpon>FrmResultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\EstadisticasJuego.cs" />
     <Compile Include="Logica\HistorialAprendizaje.cs" />
     <Compile Include="Logica\ModeloMarkov.cs" />
     <Compile Include="Modelos\EstadoBatalla.cs" />
@@ -74,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmResultados.resx">
+      <DependentUpon>FrmResultados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

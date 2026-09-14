@@ -7,6 +7,7 @@ namespace PPT
         private RepositorioAprendizaje repositorio;
 
         public HistorialAprendizaje Historial { get; private set; }
+        public EstadisticasJuego Estadisticas { get; private set; }
         public ModeloMarkov Markov { get; private set; }
 
         public ContextoJuego()
