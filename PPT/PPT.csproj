@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContextoJuego.cs" />
+    <Compile Include="Datos\RepositorioAprendizaje.cs" />
     <Compile Include="Forms\FrmBatalla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +98,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Datos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

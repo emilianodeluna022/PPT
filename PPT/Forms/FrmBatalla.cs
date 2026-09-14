@@ -95,6 +95,7 @@ namespace PPT
             ronda.Modo = modoActual;
 
             contexto.Historial.Registrar(ronda);
+            contexto.GuardarAprendizaje();
 
             estadoActual = EstadoBatalla.MostrarSeleccion;
 
