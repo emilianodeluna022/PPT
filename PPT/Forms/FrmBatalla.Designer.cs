@@ -1,6 +1,6 @@
 ﻿namespace PPT
 {
-    partial class Form1
+    partial class FrmBatalla
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPiedra = new System.Windows.Forms.Button();
+            this.btnPapel = new System.Windows.Forms.Button();
+            this.btnTijera = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(365, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "PIEDRA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPiedra.Location = new System.Drawing.Point(365, 157);
+            this.btnPiedra.Name = "button1";
+            this.btnPiedra.Size = new System.Drawing.Size(75, 23);
+            this.btnPiedra.TabIndex = 1;
+            this.btnPiedra.Text = "PIEDRA";
+            this.btnPiedra.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(365, 201);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "PAPEL";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPapel.Location = new System.Drawing.Point(365, 201);
+            this.btnPapel.Name = "button2";
+            this.btnPapel.Size = new System.Drawing.Size(75, 23);
+            this.btnPapel.TabIndex = 3;
+            this.btnPapel.Text = "PAPEL";
+            this.btnPapel.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(365, 244);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "TIJERA";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTijera.Location = new System.Drawing.Point(365, 244);
+            this.btnTijera.Name = "button3";
+            this.btnTijera.Size = new System.Drawing.Size(75, 23);
+            this.btnTijera.TabIndex = 4;
+            this.btnTijera.Text = "TIJERA";
+            this.btnTijera.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -66,9 +66,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTijera);
+            this.Controls.Add(this.btnPapel);
+            this.Controls.Add(this.btnPiedra);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -76,9 +76,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPiedra;
+        private System.Windows.Forms.Button btnPapel;
+        private System.Windows.Forms.Button btnTijera;
     }
 }
 
