@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace PPT
@@ -8,14 +9,16 @@ namespace PPT
         Random rnd = new Random();
         private ModoBatalla modoActual;
         private EstadoBatalla estadoActual;
-        public FrmBatalla() : this(ModoBatalla.Juego)
+        private ContextoJuego contexto;
+        public FrmBatalla() : this(new ContextoJuego(), ModoBatalla.Juego)
         {
         }
 
-        public FrmBatalla(ModoBatalla modoRecibido)
+        public FrmBatalla(ContextoJuego contextoRecibido, ModoBatalla modoRecibido)
         {
             InitializeComponent();
 
+            contexto = contextoRecibido;
             modoActual = modoRecibido;
             estadoActual = EstadoBatalla.TurnoJugador;
 
@@ -82,6 +85,21 @@ namespace PPT
             Jugada ia = MovimientoIA();
             ResultadoRonda resultado = VerificarGanador(jugador, ia);
 
+            
+            Ronda ronda = new Ronda();
+
+            ronda.Jugador = jugador;
+            ronda.IA = ia;
+            ronda.Resultado = resultado;
+            ronda.Modo = modoActual;
+
+            contexto.Historial.Registrar(ronda);
+            List<Jugada> vector = contexto.Historial.ObtenerVector();
+
+            Text = "Aprendizajes: " +
+                   contexto.Historial.Cantidad +
+                   " | Última: " +
+                   jugador;
             estadoActual = EstadoBatalla.MostrarSeleccion;
             MostrarEstadoVisual();
             MostrarSeleccionIA(ia);
