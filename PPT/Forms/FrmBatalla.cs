@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PPT
@@ -10,19 +11,24 @@ namespace PPT
         private ModoBatalla modoActual;
         private EstadoBatalla estadoActual;
         private ContextoJuego contexto;
+        private Size tamanoBaseBatalla;
+        private Dictionary<Control, Rectangle> posicionesBaseBatalla;
         public FrmBatalla() : this(new ContextoJuego(), ModoBatalla.Juego)
         {
         }
 
-        public FrmBatalla(ContextoJuego contextoRecibido, ModoBatalla modoRecibido)
+        public FrmBatalla(
+    ContextoJuego contextoRecibido,
+    ModoBatalla modoRecibido)
         {
             InitializeComponent();
+
+            AutoScaleMode = AutoScaleMode.None;
 
             contexto = contextoRecibido;
             modoActual = modoRecibido;
             estadoActual = EstadoBatalla.TurnoJugador;
 
-            MostrarEstadoVisual();
             picZonaFuego.Tag = Jugada.Piedra;
             picZonaAgua.Tag = Jugada.Papel;
             picZonaPlanta.Tag = Jugada.Tijera;
@@ -31,6 +37,98 @@ namespace PPT
             picZonaAgua.Click += ZonaJugada_Click;
             picZonaPlanta.Click += ZonaJugada_Click;
             picZonaSalir.Click += ZonaSalir_Click;
+
+            GuardarPosicionesBaseBatalla();
+
+            pnlEscena.Resize += PnlEscena_Resize;
+
+            MostrarEstadoVisual();
+        }
+        private void GuardarPosicionesBaseBatalla()
+        {
+            tamanoBaseBatalla = pnlEscena.ClientSize;
+
+            posicionesBaseBatalla =
+                new Dictionary<Control, Rectangle>();
+
+            posicionesBaseBatalla.Add(
+                picZonaFuego,
+                picZonaFuego.Bounds);
+
+            posicionesBaseBatalla.Add(
+                picZonaAgua,
+                picZonaAgua.Bounds);
+
+            posicionesBaseBatalla.Add(
+                picZonaPlanta,
+                picZonaPlanta.Bounds);
+
+            posicionesBaseBatalla.Add(
+                picZonaSalir,
+                picZonaSalir.Bounds);
+
+            posicionesBaseBatalla.Add(
+                picSeleccionIA,
+                picSeleccionIA.Bounds);
+        }
+        private void PnlEscena_Resize(object sender, EventArgs e)
+        {
+            AjustarControlesBatalla();
+        }
+        private void AjustarControlesBatalla()
+        {
+            if (tamanoBaseBatalla.Width == 0 ||
+                tamanoBaseBatalla.Height == 0)
+            {
+                return;
+            }
+
+            double escalaX =
+                (double)pnlEscena.ClientSize.Width /
+                tamanoBaseBatalla.Width;
+
+            double escalaY =
+                (double)pnlEscena.ClientSize.Height /
+                tamanoBaseBatalla.Height;
+
+            EscalarControlBatalla(
+                picZonaFuego,
+                escalaX,
+                escalaY);
+
+            EscalarControlBatalla(
+                picZonaAgua,
+                escalaX,
+                escalaY);
+
+            EscalarControlBatalla(
+                picZonaPlanta,
+                escalaX,
+                escalaY);
+
+            EscalarControlBatalla(
+                picZonaSalir,
+                escalaX,
+                escalaY);
+
+            EscalarControlBatalla(
+                picSeleccionIA,
+                escalaX,
+                escalaY);
+        }
+        private void EscalarControlBatalla(
+    Control control,
+    double escalaX,
+    double escalaY)
+        {
+            Rectangle original =
+                posicionesBaseBatalla[control];
+
+            control.SetBounds(
+                (int)Math.Round(original.X * escalaX),
+                (int)Math.Round(original.Y * escalaY),
+                (int)Math.Round(original.Width * escalaX),
+                (int)Math.Round(original.Height * escalaY));
         }
         private void MostrarEstadoVisual()
         {
