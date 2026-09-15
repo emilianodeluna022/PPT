@@ -3,6 +3,7 @@
     public enum EstadoBatalla
     {
         TurnoJugador,
-        MostrarSeleccion
+        MostrarSeleccion,
+        MostrarResultado
     }
 }

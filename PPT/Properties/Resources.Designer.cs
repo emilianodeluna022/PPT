@@ -113,6 +113,36 @@ namespace PPT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ResultadoEmpate {
+            get {
+                object obj = ResourceManager.GetObject("ResultadoEmpate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ResultadoGanaste {
+            get {
+                object obj = ResourceManager.GetObject("ResultadoGanaste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ResultadoPerdiste {
+            get {
+                object obj = ResourceManager.GetObject("ResultadoPerdiste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ResultadosMarkov {
             get {
                 object obj = ResourceManager.GetObject("ResultadosMarkov", resourceCulture);

@@ -29,25 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.tmrRonda = new System.Windows.Forms.Timer(this.components);
             this.pnlEscena = new System.Windows.Forms.Panel();
             this.picSeleccionIA = new System.Windows.Forms.PictureBox();
             this.picZonaSalir = new System.Windows.Forms.PictureBox();
             this.picZonaPlanta = new System.Windows.Forms.PictureBox();
             this.picZonaAgua = new System.Windows.Forms.PictureBox();
             this.picZonaFuego = new System.Windows.Forms.PictureBox();
-            this.tmrRonda = new System.Windows.Forms.Timer(this.components);
+            this.picResultadoRonda = new System.Windows.Forms.PictureBox();
             this.pnlEscena.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSeleccionIA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaPlanta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaAgua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaFuego)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResultadoRonda)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tmrRonda
+            // 
+            this.tmrRonda.Interval = 2500;
+            this.tmrRonda.Tick += new System.EventHandler(this.tmrRonda_Tick);
             // 
             // pnlEscena
             // 
             this.pnlEscena.BackgroundImage = global::PPT.Properties.Resources.BatallaJuegoSeleccion;
             this.pnlEscena.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlEscena.Controls.Add(this.picResultadoRonda);
             this.pnlEscena.Controls.Add(this.picSeleccionIA);
             this.pnlEscena.Controls.Add(this.picZonaSalir);
             this.pnlEscena.Controls.Add(this.picZonaPlanta);
@@ -116,10 +124,16 @@
             this.picZonaFuego.TabIndex = 0;
             this.picZonaFuego.TabStop = false;
             // 
-            // tmrRonda
+            // picResultadoRonda
             // 
-            this.tmrRonda.Interval = 2500;
-            this.tmrRonda.Tick += new System.EventHandler(this.tmrRonda_Tick);
+            this.picResultadoRonda.BackColor = System.Drawing.Color.Transparent;
+            this.picResultadoRonda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picResultadoRonda.Location = new System.Drawing.Point(210, 182);
+            this.picResultadoRonda.Name = "picResultadoRonda";
+            this.picResultadoRonda.Size = new System.Drawing.Size(464, 94);
+            this.picResultadoRonda.TabIndex = 5;
+            this.picResultadoRonda.TabStop = false;
+            this.picResultadoRonda.Visible = false;
             // 
             // FrmBatalla
             // 
@@ -138,6 +152,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picZonaPlanta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaAgua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaFuego)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picResultadoRonda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,6 +165,7 @@
         private System.Windows.Forms.PictureBox picZonaFuego;
         private System.Windows.Forms.PictureBox picSeleccionIA;
         private System.Windows.Forms.Timer tmrRonda;
+        private System.Windows.Forms.PictureBox picResultadoRonda;
     }
 }
 

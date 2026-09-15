@@ -133,6 +133,15 @@
   <data name="MenuPrincipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuPrincipal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ResultadoEmpate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ResultadoEmpate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResultadoGanaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ResultadoGanaste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResultadoPerdiste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ResultadoPerdiste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ResultadosMarkov" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ResultadosMarkov.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -12,6 +12,7 @@ namespace PPT
         private EstadoBatalla estadoActual;
         private ContextoJuego contexto;
         private Size tamanoBaseBatalla;
+        private ResultadoRonda resultadoActual;
         private Dictionary<Control, Rectangle> posicionesBaseBatalla;
         public FrmBatalla() : this(new ContextoJuego(), ModoBatalla.Juego)
         {
@@ -70,6 +71,9 @@ namespace PPT
             posicionesBaseBatalla.Add(
                 picSeleccionIA,
                 picSeleccionIA.Bounds);
+            posicionesBaseBatalla.Add(
+                picResultadoRonda,
+                picResultadoRonda.Bounds);
         }
         private void PnlEscena_Resize(object sender, EventArgs e)
         {
@@ -115,6 +119,10 @@ namespace PPT
                 picSeleccionIA,
                 escalaX,
                 escalaY);
+            EscalarControlBatalla(
+                picResultadoRonda,
+                escalaX,
+                escalaY);
         }
         private void EscalarControlBatalla(
     Control control,
@@ -135,7 +143,9 @@ namespace PPT
             if (estadoActual == EstadoBatalla.TurnoJugador)
             {
                 picSeleccionIA.Visible = false;
+                picResultadoRonda.Visible = false;
             }
+
             if (modoActual == ModoBatalla.Juego)
             {
                 if (estadoActual == EstadoBatalla.TurnoJugador)
@@ -182,25 +192,51 @@ namespace PPT
 
             Jugada ia = MovimientoIA();
 
-            ResultadoRonda resultado =
+            resultadoActual =
                 VerificarGanador(jugador, ia);
 
             Ronda ronda = new Ronda();
 
             ronda.Jugador = jugador;
             ronda.IA = ia;
-            ronda.Resultado = resultado;
+            ronda.Resultado = resultadoActual;
             ronda.Modo = modoActual;
 
             contexto.Historial.Registrar(ronda);
             contexto.GuardarAprendizaje();
 
-            estadoActual = EstadoBatalla.MostrarSeleccion;
+            estadoActual =
+                EstadoBatalla.MostrarSeleccion;
+
+            picResultadoRonda.Visible = false;
 
             MostrarEstadoVisual();
             MostrarSeleccionIA(ia);
 
+            tmrRonda.Interval = 1000;
             tmrRonda.Start();
+        }
+        private void MostrarResultadoRonda(
+    ResultadoRonda resultado)
+        {
+            if (resultado == ResultadoRonda.GanaJugador)
+            {
+                picResultadoRonda.Image =
+                    Properties.Resources.ResultadoGanaste;
+            }
+            else if (resultado == ResultadoRonda.GanaIA)
+            {
+                picResultadoRonda.Image =
+                    Properties.Resources.ResultadoPerdiste;
+            }
+            else
+            {
+                picResultadoRonda.Image =
+                    Properties.Resources.ResultadoEmpate;
+            }
+
+            picResultadoRonda.Visible = true;
+            picResultadoRonda.BringToFront();
         }
 
         private Jugada MovimientoIA()
@@ -253,15 +289,39 @@ namespace PPT
             picSeleccionIA.Visible = true;
         }
 
-        private void tmrRonda_Tick(object sender, EventArgs e)
+        private void tmrRonda_Tick(
+    object sender,
+    EventArgs e)
         {
-            tmrRonda.Stop();
+            if (estadoActual ==
+                EstadoBatalla.MostrarSeleccion)
+            {
+                estadoActual =
+                    EstadoBatalla.MostrarResultado;
 
-            estadoActual = EstadoBatalla.TurnoJugador;
+                MostrarResultadoRonda(
+                    resultadoActual);
 
-            MostrarEstadoVisual();
+                tmrRonda.Interval = 1300;
 
-            HabilitarJugadas(true);
+                return;
+            }
+
+            if (estadoActual ==
+                EstadoBatalla.MostrarResultado)
+            {
+                tmrRonda.Stop();
+
+                estadoActual =
+                    EstadoBatalla.TurnoJugador;
+
+                picResultadoRonda.Visible = false;
+                picSeleccionIA.Visible = false;
+
+                MostrarEstadoVisual();
+
+                HabilitarJugadas(true);
+            }
         }
         private void HabilitarJugadas(bool habilitar)
         {
