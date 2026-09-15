@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using PPT.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace PPT
 {
     internal static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            ContextoJuego contexto = new ContextoJuego();
+
+            Application.Run(
+                new FrmMenuPrincipal(contexto));
         }
     }
 }
