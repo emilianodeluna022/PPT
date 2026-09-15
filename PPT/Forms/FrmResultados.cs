@@ -19,98 +19,117 @@ namespace PPT.Forms
 
             contexto = contextoRecibido;
 
+            picZonaMarkov.Click += ZonaMarkov_Click;
+            picZonaVolverResumen.Click += ZonaVolverResumen_Click;
+            picZonaSalirResultados.Click += ZonaSalir_Click;
+            picZonaSalirMarkov.Click += ZonaSalir_Click;
+
             CargarResultados();
+            MostrarResumen();
         }
         private void CargarResultados()
         {
             lblTotal.Text =
-                "Partidas totales: " +
-                contexto.Estadisticas.ObtenerTotalPartidas();
+    contexto.Estadisticas.ObtenerTotalPartidas().ToString();
 
             lblEntrenamientos.Text =
-                "Entrenamientos: " +
-                contexto.Estadisticas.ObtenerEntrenamientos();
+                contexto.Estadisticas.ObtenerEntrenamientos().ToString();
 
             lblJuego.Text =
-                "Partidas contra IA: " +
-                contexto.Estadisticas.ObtenerPartidasJuego();
+                contexto.Estadisticas.ObtenerPartidasJuego().ToString();
 
             lblVictorias.Text =
-                "Victorias: " +
-                contexto.Estadisticas.ObtenerVictorias();
+                contexto.Estadisticas.ObtenerVictorias().ToString();
 
             lblDerrotas.Text =
-                "Derrotas: " +
-                contexto.Estadisticas.ObtenerDerrotas();
+                contexto.Estadisticas.ObtenerDerrotas().ToString();
 
             lblEmpates.Text =
-                "Empates: " +
-                contexto.Estadisticas.ObtenerEmpates();
+                contexto.Estadisticas.ObtenerEmpates().ToString();
 
             MostrarVector();
             MostrarMatriz();
         }
         private void MostrarVector()
         {
-            List<Jugada> vector =
-                contexto.Historial.ObtenerVector();
+            flpVector.Controls.Clear();
 
-            string texto = "";
+            List<Jugada> vector = contexto.Historial.ObtenerVector();
 
-            foreach (Jugada jugada in vector)
+            int inicio = Math.Max(0, vector.Count - 8);
+
+            for (int i = inicio; i < vector.Count; i++)
             {
-                if (jugada == Jugada.Piedra)
-                {
-                    texto += "F ";
-                }
-                else if (jugada == Jugada.Papel)
-                {
-                    texto += "A ";
-                }
-                else
-                {
-                    texto += "P ";
-                }
-            }
+                PictureBox icono = new PictureBox();
 
-            txtVector.Text = texto;
+                icono.Image = ObtenerImagenJugada(vector[i]);
+                icono.SizeMode = PictureBoxSizeMode.Zoom;
+                icono.Width = 45;
+                icono.Height = 45;
+                icono.Margin = new Padding(3);
+                icono.BackColor = Color.Transparent;
+
+                flpVector.Controls.Add(icono);
+            }
         }
         private void MostrarMatriz()
         {
-            double[,] matriz =
-                contexto.Markov.ObtenerMatrizProbabilidades();
+            double[,] matriz = contexto.Markov.ObtenerMatrizProbabilidades();
 
-            DataTable tabla = new DataTable();
+            lblFuegoFuego.Text = matriz[0, 0].ToString("P1");
+            lblFuegoAgua.Text = matriz[0, 1].ToString("P1");
+            lblFuegoPlanta.Text = matriz[0, 2].ToString("P1");
 
-            tabla.Columns.Add("Anterior");
-            tabla.Columns.Add("Fuego");
-            tabla.Columns.Add("Agua");
-            tabla.Columns.Add("Planta");
+            lblAguaFuego.Text = matriz[1, 0].ToString("P1");
+            lblAguaAgua.Text = matriz[1, 1].ToString("P1");
+            lblAguaPlanta.Text = matriz[1, 2].ToString("P1");
 
-            tabla.Rows.Add(
-                "Fuego",
-                matriz[0, 0].ToString("P2"),
-                matriz[0, 1].ToString("P2"),
-                matriz[0, 2].ToString("P2"));
-
-            tabla.Rows.Add(
-                "Agua",
-                matriz[1, 0].ToString("P2"),
-                matriz[1, 1].ToString("P2"),
-                matriz[1, 2].ToString("P2"));
-
-            tabla.Rows.Add(
-                "Planta",
-                matriz[2, 0].ToString("P2"),
-                matriz[2, 1].ToString("P2"),
-                matriz[2, 2].ToString("P2"));
-
-            dgvMatriz.DataSource = tabla;
+            lblPlantaFuego.Text = matriz[2, 0].ToString("P1");
+            lblPlantaAgua.Text = matriz[2, 1].ToString("P1");
+            lblPlantaPlanta.Text = matriz[2, 2].ToString("P1");
         }
 
-        private void btnSalirResultados_Click(object sender, EventArgs e)
+        private void ZonaMarkov_Click(object sender, EventArgs e)
+        {
+            MostrarMarkov();
+        }
+
+        private void ZonaVolverResumen_Click(object sender, EventArgs e)
+        {
+            MostrarResumen();
+        }
+
+        private void ZonaSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void MostrarResumen()
+        {
+            pnlResumen.Visible = true;
+            pnlMarkov.Visible = false;
+            pnlResumen.BringToFront();
+        }
+
+        private void MostrarMarkov()
+        {
+            pnlResumen.Visible = false;
+            pnlMarkov.Visible = true;
+            pnlMarkov.BringToFront();
+        }
+        private Image ObtenerImagenJugada(Jugada jugada)
+        {
+            if (jugada == Jugada.Piedra)
+            {
+                return Properties.Resources.SeleccionFuego;
+            }
+
+            if (jugada == Jugada.Papel)
+            {
+                return Properties.Resources.SeleccionAgua;
+            }
+
+            return Properties.Resources.SeleccionPlanta;
         }
     }
 }
