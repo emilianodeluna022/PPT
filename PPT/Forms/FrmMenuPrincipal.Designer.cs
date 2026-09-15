@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.picZonaEntrenar = new System.Windows.Forms.PictureBox();
-            this.picZonaJugar = new System.Windows.Forms.PictureBox();
-            this.picZonaResultados = new System.Windows.Forms.PictureBox();
             this.picZonaSalirMenu = new System.Windows.Forms.PictureBox();
+            this.picZonaResultados = new System.Windows.Forms.PictureBox();
+            this.picZonaJugar = new System.Windows.Forms.PictureBox();
+            this.picZonaEntrenar = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaEntrenar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaJugar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaResultados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaJugar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaEntrenar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -54,29 +54,21 @@
             this.pnlMenu.Size = new System.Drawing.Size(884, 511);
             this.pnlMenu.TabIndex = 0;
             // 
-            // picZonaEntrenar
+            // picZonaSalirMenu
             // 
-            this.picZonaEntrenar.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaEntrenar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaEntrenar.Location = new System.Drawing.Point(203, 191);
-            this.picZonaEntrenar.Name = "picZonaEntrenar";
-            this.picZonaEntrenar.Size = new System.Drawing.Size(480, 67);
-            this.picZonaEntrenar.TabIndex = 0;
-            this.picZonaEntrenar.TabStop = false;
-            // 
-            // picZonaJugar
-            // 
-            this.picZonaJugar.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaJugar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaJugar.Location = new System.Drawing.Point(203, 292);
-            this.picZonaJugar.Name = "picZonaJugar";
-            this.picZonaJugar.Size = new System.Drawing.Size(480, 67);
-            this.picZonaJugar.TabIndex = 1;
-            this.picZonaJugar.TabStop = false;
+            this.picZonaSalirMenu.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaSalirMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picZonaSalirMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaSalirMenu.Location = new System.Drawing.Point(815, 22);
+            this.picZonaSalirMenu.Name = "picZonaSalirMenu";
+            this.picZonaSalirMenu.Size = new System.Drawing.Size(43, 37);
+            this.picZonaSalirMenu.TabIndex = 3;
+            this.picZonaSalirMenu.TabStop = false;
             // 
             // picZonaResultados
             // 
             this.picZonaResultados.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaResultados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaResultados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaResultados.Location = new System.Drawing.Point(203, 393);
             this.picZonaResultados.Name = "picZonaResultados";
@@ -84,15 +76,27 @@
             this.picZonaResultados.TabIndex = 2;
             this.picZonaResultados.TabStop = false;
             // 
-            // picZonaSalirMenu
+            // picZonaJugar
             // 
-            this.picZonaSalirMenu.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaSalirMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaSalirMenu.Location = new System.Drawing.Point(815, 22);
-            this.picZonaSalirMenu.Name = "picZonaSalirMenu";
-            this.picZonaSalirMenu.Size = new System.Drawing.Size(43, 37);
-            this.picZonaSalirMenu.TabIndex = 3;
-            this.picZonaSalirMenu.TabStop = false;
+            this.picZonaJugar.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaJugar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picZonaJugar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaJugar.Location = new System.Drawing.Point(203, 292);
+            this.picZonaJugar.Name = "picZonaJugar";
+            this.picZonaJugar.Size = new System.Drawing.Size(480, 67);
+            this.picZonaJugar.TabIndex = 1;
+            this.picZonaJugar.TabStop = false;
+            // 
+            // picZonaEntrenar
+            // 
+            this.picZonaEntrenar.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaEntrenar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picZonaEntrenar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaEntrenar.Location = new System.Drawing.Point(203, 191);
+            this.picZonaEntrenar.Name = "picZonaEntrenar";
+            this.picZonaEntrenar.Size = new System.Drawing.Size(480, 67);
+            this.picZonaEntrenar.TabIndex = 0;
+            this.picZonaEntrenar.TabStop = false;
             // 
             // FrmMenuPrincipal
             // 
@@ -103,10 +107,10 @@
             this.Name = "FrmMenuPrincipal";
             this.Text = "FrmMenuPrincipal";
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaEntrenar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaJugar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaResultados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaJugar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaEntrenar)).EndInit();
             this.ResumeLayout(false);
 
         }
