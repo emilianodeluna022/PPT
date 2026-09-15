@@ -36,28 +36,28 @@
             this.lblEmpates = new System.Windows.Forms.Label();
             this.dgvMatriz = new System.Windows.Forms.DataGridView();
             this.pnlResumen = new System.Windows.Forms.Panel();
-            this.pnlMarkov = new System.Windows.Forms.Panel();
-            this.picZonaSalirMarkov = new System.Windows.Forms.PictureBox();
-            this.picZonaVolverResumen = new System.Windows.Forms.PictureBox();
-            this.picZonaSalirResultados = new System.Windows.Forms.PictureBox();
-            this.picZonaMarkov = new System.Windows.Forms.PictureBox();
             this.flpVector = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblFuegoFuego = new System.Windows.Forms.Label();
-            this.lblFuegoAgua = new System.Windows.Forms.Label();
-            this.lblFuegoPlanta = new System.Windows.Forms.Label();
-            this.lblAguaFuego = new System.Windows.Forms.Label();
-            this.lblAguaAgua = new System.Windows.Forms.Label();
-            this.lblAguaPlanta = new System.Windows.Forms.Label();
-            this.lblPlantaFuego = new System.Windows.Forms.Label();
-            this.lblPlantaAgua = new System.Windows.Forms.Label();
+            this.picZonaMarkov = new System.Windows.Forms.PictureBox();
+            this.picZonaSalirResultados = new System.Windows.Forms.PictureBox();
+            this.pnlMarkov = new System.Windows.Forms.Panel();
             this.lblPlantaPlanta = new System.Windows.Forms.Label();
+            this.lblPlantaAgua = new System.Windows.Forms.Label();
+            this.lblPlantaFuego = new System.Windows.Forms.Label();
+            this.lblAguaPlanta = new System.Windows.Forms.Label();
+            this.lblAguaAgua = new System.Windows.Forms.Label();
+            this.lblAguaFuego = new System.Windows.Forms.Label();
+            this.lblFuegoPlanta = new System.Windows.Forms.Label();
+            this.lblFuegoAgua = new System.Windows.Forms.Label();
+            this.lblFuegoFuego = new System.Windows.Forms.Label();
+            this.picZonaVolverResumen = new System.Windows.Forms.PictureBox();
+            this.picZonaSalirMarkov = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).BeginInit();
             this.pnlResumen.SuspendLayout();
-            this.pnlMarkov.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirResultados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaMarkov)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirResultados)).BeginInit();
+            this.pnlMarkov.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTotal
@@ -148,6 +148,35 @@
             this.pnlResumen.Size = new System.Drawing.Size(884, 561);
             this.pnlResumen.TabIndex = 9;
             // 
+            // flpVector
+            // 
+            this.flpVector.BackColor = System.Drawing.Color.Transparent;
+            this.flpVector.Location = new System.Drawing.Point(404, 421);
+            this.flpVector.Name = "flpVector";
+            this.flpVector.Size = new System.Drawing.Size(430, 60);
+            this.flpVector.TabIndex = 6;
+            this.flpVector.WrapContents = false;
+            // 
+            // picZonaMarkov
+            // 
+            this.picZonaMarkov.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaMarkov.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaMarkov.Location = new System.Drawing.Point(388, 505);
+            this.picZonaMarkov.Name = "picZonaMarkov";
+            this.picZonaMarkov.Size = new System.Drawing.Size(108, 44);
+            this.picZonaMarkov.TabIndex = 1;
+            this.picZonaMarkov.TabStop = false;
+            // 
+            // picZonaSalirResultados
+            // 
+            this.picZonaSalirResultados.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaSalirResultados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaSalirResultados.Location = new System.Drawing.Point(820, 26);
+            this.picZonaSalirResultados.Name = "picZonaSalirResultados";
+            this.picZonaSalirResultados.Size = new System.Drawing.Size(37, 31);
+            this.picZonaSalirResultados.TabIndex = 0;
+            this.picZonaSalirResultados.TabStop = false;
+            // 
             // pnlMarkov
             // 
             this.pnlMarkov.BackgroundImage = global::PPT.Properties.Resources.ResultadosMarkov;
@@ -171,124 +200,15 @@
             this.pnlMarkov.TabIndex = 0;
             this.pnlMarkov.Visible = false;
             // 
-            // picZonaSalirMarkov
+            // lblPlantaPlanta
             // 
-            this.picZonaSalirMarkov.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaSalirMarkov.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaSalirMarkov.Location = new System.Drawing.Point(810, 13);
-            this.picZonaSalirMarkov.Name = "picZonaSalirMarkov";
-            this.picZonaSalirMarkov.Size = new System.Drawing.Size(62, 56);
-            this.picZonaSalirMarkov.TabIndex = 0;
-            this.picZonaSalirMarkov.TabStop = false;
-            // 
-            // picZonaVolverResumen
-            // 
-            this.picZonaVolverResumen.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaVolverResumen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaVolverResumen.Location = new System.Drawing.Point(388, 505);
-            this.picZonaVolverResumen.Name = "picZonaVolverResumen";
-            this.picZonaVolverResumen.Size = new System.Drawing.Size(108, 44);
-            this.picZonaVolverResumen.TabIndex = 1;
-            this.picZonaVolverResumen.TabStop = false;
-            // 
-            // picZonaSalirResultados
-            // 
-            this.picZonaSalirResultados.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaSalirResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaSalirResultados.Location = new System.Drawing.Point(820, 26);
-            this.picZonaSalirResultados.Name = "picZonaSalirResultados";
-            this.picZonaSalirResultados.Size = new System.Drawing.Size(37, 31);
-            this.picZonaSalirResultados.TabIndex = 0;
-            this.picZonaSalirResultados.TabStop = false;
-            // 
-            // picZonaMarkov
-            // 
-            this.picZonaMarkov.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaMarkov.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaMarkov.Location = new System.Drawing.Point(388, 505);
-            this.picZonaMarkov.Name = "picZonaMarkov";
-            this.picZonaMarkov.Size = new System.Drawing.Size(108, 44);
-            this.picZonaMarkov.TabIndex = 1;
-            this.picZonaMarkov.TabStop = false;
-            // 
-            // flpVector
-            // 
-            this.flpVector.BackColor = System.Drawing.Color.Transparent;
-            this.flpVector.Location = new System.Drawing.Point(404, 421);
-            this.flpVector.Name = "flpVector";
-            this.flpVector.Size = new System.Drawing.Size(430, 60);
-            this.flpVector.TabIndex = 6;
-            this.flpVector.WrapContents = false;
-            // 
-            // lblFuegoFuego
-            // 
-            this.lblFuegoFuego.BackColor = System.Drawing.Color.Transparent;
-            this.lblFuegoFuego.Location = new System.Drawing.Point(261, 253);
-            this.lblFuegoFuego.Name = "lblFuegoFuego";
-            this.lblFuegoFuego.Size = new System.Drawing.Size(170, 55);
-            this.lblFuegoFuego.TabIndex = 8;
-            this.lblFuegoFuego.Text = "label1";
-            this.lblFuegoFuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFuegoAgua
-            // 
-            this.lblFuegoAgua.BackColor = System.Drawing.Color.Transparent;
-            this.lblFuegoAgua.Location = new System.Drawing.Point(457, 258);
-            this.lblFuegoAgua.Name = "lblFuegoAgua";
-            this.lblFuegoAgua.Size = new System.Drawing.Size(170, 45);
-            this.lblFuegoAgua.TabIndex = 9;
-            this.lblFuegoAgua.Text = "label2";
-            this.lblFuegoAgua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFuegoPlanta
-            // 
-            this.lblFuegoPlanta.BackColor = System.Drawing.Color.Transparent;
-            this.lblFuegoPlanta.Location = new System.Drawing.Point(653, 258);
-            this.lblFuegoPlanta.Name = "lblFuegoPlanta";
-            this.lblFuegoPlanta.Size = new System.Drawing.Size(170, 45);
-            this.lblFuegoPlanta.TabIndex = 10;
-            this.lblFuegoPlanta.Text = "label3";
-            this.lblFuegoPlanta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAguaFuego
-            // 
-            this.lblAguaFuego.BackColor = System.Drawing.Color.Transparent;
-            this.lblAguaFuego.Location = new System.Drawing.Point(261, 339);
-            this.lblAguaFuego.Name = "lblAguaFuego";
-            this.lblAguaFuego.Size = new System.Drawing.Size(170, 45);
-            this.lblAguaFuego.TabIndex = 11;
-            this.lblAguaFuego.Text = "label4";
-            this.lblAguaFuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAguaAgua
-            // 
-            this.lblAguaAgua.BackColor = System.Drawing.Color.Transparent;
-            this.lblAguaAgua.Location = new System.Drawing.Point(457, 339);
-            this.lblAguaAgua.Name = "lblAguaAgua";
-            this.lblAguaAgua.Size = new System.Drawing.Size(170, 45);
-            this.lblAguaAgua.TabIndex = 12;
-            this.lblAguaAgua.Text = "label5";
-            this.lblAguaAgua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblAguaPlanta
-            // 
-            this.lblAguaPlanta.BackColor = System.Drawing.Color.Transparent;
-            this.lblAguaPlanta.Location = new System.Drawing.Point(653, 339);
-            this.lblAguaPlanta.Name = "lblAguaPlanta";
-            this.lblAguaPlanta.Size = new System.Drawing.Size(170, 45);
-            this.lblAguaPlanta.TabIndex = 13;
-            this.lblAguaPlanta.Text = "label6";
-            this.lblAguaPlanta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPlantaFuego
-            // 
-            this.lblPlantaFuego.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlantaFuego.Location = new System.Drawing.Point(261, 415);
-            this.lblPlantaFuego.Name = "lblPlantaFuego";
-            this.lblPlantaFuego.Size = new System.Drawing.Size(170, 45);
-            this.lblPlantaFuego.TabIndex = 14;
-            this.lblPlantaFuego.Text = "label7";
-            this.lblPlantaFuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlantaPlanta.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlantaPlanta.Location = new System.Drawing.Point(653, 415);
+            this.lblPlantaPlanta.Name = "lblPlantaPlanta";
+            this.lblPlantaPlanta.Size = new System.Drawing.Size(170, 45);
+            this.lblPlantaPlanta.TabIndex = 16;
+            this.lblPlantaPlanta.Text = "label9";
+            this.lblPlantaPlanta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPlantaAgua
             // 
@@ -300,15 +220,95 @@
             this.lblPlantaAgua.Text = "label8";
             this.lblPlantaAgua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPlantaPlanta
+            // lblPlantaFuego
             // 
-            this.lblPlantaPlanta.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlantaPlanta.Location = new System.Drawing.Point(653, 415);
-            this.lblPlantaPlanta.Name = "lblPlantaPlanta";
-            this.lblPlantaPlanta.Size = new System.Drawing.Size(170, 45);
-            this.lblPlantaPlanta.TabIndex = 16;
-            this.lblPlantaPlanta.Text = "label9";
-            this.lblPlantaPlanta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlantaFuego.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlantaFuego.Location = new System.Drawing.Point(261, 415);
+            this.lblPlantaFuego.Name = "lblPlantaFuego";
+            this.lblPlantaFuego.Size = new System.Drawing.Size(170, 45);
+            this.lblPlantaFuego.TabIndex = 14;
+            this.lblPlantaFuego.Text = "label7";
+            this.lblPlantaFuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAguaPlanta
+            // 
+            this.lblAguaPlanta.BackColor = System.Drawing.Color.Transparent;
+            this.lblAguaPlanta.Location = new System.Drawing.Point(653, 339);
+            this.lblAguaPlanta.Name = "lblAguaPlanta";
+            this.lblAguaPlanta.Size = new System.Drawing.Size(170, 45);
+            this.lblAguaPlanta.TabIndex = 13;
+            this.lblAguaPlanta.Text = "label6";
+            this.lblAguaPlanta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAguaAgua
+            // 
+            this.lblAguaAgua.BackColor = System.Drawing.Color.Transparent;
+            this.lblAguaAgua.Location = new System.Drawing.Point(457, 339);
+            this.lblAguaAgua.Name = "lblAguaAgua";
+            this.lblAguaAgua.Size = new System.Drawing.Size(170, 45);
+            this.lblAguaAgua.TabIndex = 12;
+            this.lblAguaAgua.Text = "label5";
+            this.lblAguaAgua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAguaFuego
+            // 
+            this.lblAguaFuego.BackColor = System.Drawing.Color.Transparent;
+            this.lblAguaFuego.Location = new System.Drawing.Point(261, 339);
+            this.lblAguaFuego.Name = "lblAguaFuego";
+            this.lblAguaFuego.Size = new System.Drawing.Size(170, 45);
+            this.lblAguaFuego.TabIndex = 11;
+            this.lblAguaFuego.Text = "label4";
+            this.lblAguaFuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFuegoPlanta
+            // 
+            this.lblFuegoPlanta.BackColor = System.Drawing.Color.Transparent;
+            this.lblFuegoPlanta.Location = new System.Drawing.Point(653, 258);
+            this.lblFuegoPlanta.Name = "lblFuegoPlanta";
+            this.lblFuegoPlanta.Size = new System.Drawing.Size(170, 45);
+            this.lblFuegoPlanta.TabIndex = 10;
+            this.lblFuegoPlanta.Text = "label3";
+            this.lblFuegoPlanta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFuegoAgua
+            // 
+            this.lblFuegoAgua.BackColor = System.Drawing.Color.Transparent;
+            this.lblFuegoAgua.Location = new System.Drawing.Point(457, 258);
+            this.lblFuegoAgua.Name = "lblFuegoAgua";
+            this.lblFuegoAgua.Size = new System.Drawing.Size(170, 45);
+            this.lblFuegoAgua.TabIndex = 9;
+            this.lblFuegoAgua.Text = "label2";
+            this.lblFuegoAgua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFuegoFuego
+            // 
+            this.lblFuegoFuego.BackColor = System.Drawing.Color.Transparent;
+            this.lblFuegoFuego.Location = new System.Drawing.Point(261, 253);
+            this.lblFuegoFuego.Name = "lblFuegoFuego";
+            this.lblFuegoFuego.Size = new System.Drawing.Size(170, 55);
+            this.lblFuegoFuego.TabIndex = 8;
+            this.lblFuegoFuego.Text = "label1";
+            this.lblFuegoFuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picZonaVolverResumen
+            // 
+            this.picZonaVolverResumen.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaVolverResumen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaVolverResumen.Location = new System.Drawing.Point(388, 505);
+            this.picZonaVolverResumen.Name = "picZonaVolverResumen";
+            this.picZonaVolverResumen.Size = new System.Drawing.Size(108, 44);
+            this.picZonaVolverResumen.TabIndex = 1;
+            this.picZonaVolverResumen.TabStop = false;
+            // 
+            // picZonaSalirMarkov
+            // 
+            this.picZonaSalirMarkov.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaSalirMarkov.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaSalirMarkov.Location = new System.Drawing.Point(810, 13);
+            this.picZonaSalirMarkov.Name = "picZonaSalirMarkov";
+            this.picZonaSalirMarkov.Size = new System.Drawing.Size(62, 56);
+            this.picZonaSalirMarkov.TabIndex = 0;
+            this.picZonaSalirMarkov.TabStop = false;
             // 
             // FrmResultados
             // 
@@ -317,18 +317,16 @@
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.pnlMarkov);
             this.Controls.Add(this.pnlResumen);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "FrmResultados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultados";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).EndInit();
             this.pnlResumen.ResumeLayout(false);
-            this.pnlMarkov.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirResultados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaMarkov)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirResultados)).EndInit();
+            this.pnlMarkov.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).EndInit();
             this.ResumeLayout(false);
 
         }
