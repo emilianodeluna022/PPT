@@ -28,17 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblEntrenamientos = new System.Windows.Forms.Label();
-            this.lblJuego = new System.Windows.Forms.Label();
-            this.lblVictorias = new System.Windows.Forms.Label();
-            this.lblDerrotas = new System.Windows.Forms.Label();
-            this.lblEmpates = new System.Windows.Forms.Label();
-            this.dgvMatriz = new System.Windows.Forms.DataGridView();
-            this.pnlResumen = new System.Windows.Forms.Panel();
-            this.flpVector = new System.Windows.Forms.FlowLayoutPanel();
-            this.picZonaMarkov = new System.Windows.Forms.PictureBox();
-            this.picZonaSalirResultados = new System.Windows.Forms.PictureBox();
             this.pnlMarkov = new System.Windows.Forms.Panel();
             this.lblPlantaPlanta = new System.Windows.Forms.Label();
             this.lblPlantaAgua = new System.Windows.Forms.Label();
@@ -49,133 +38,27 @@
             this.lblFuegoPlanta = new System.Windows.Forms.Label();
             this.lblFuegoAgua = new System.Windows.Forms.Label();
             this.lblFuegoFuego = new System.Windows.Forms.Label();
+            this.dgvMatriz = new System.Windows.Forms.DataGridView();
             this.picZonaVolverResumen = new System.Windows.Forms.PictureBox();
             this.picZonaSalirMarkov = new System.Windows.Forms.PictureBox();
+            this.pnlResumen = new System.Windows.Forms.Panel();
+            this.flpVector = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblVictorias = new System.Windows.Forms.Label();
+            this.lblDerrotas = new System.Windows.Forms.Label();
+            this.lblEmpates = new System.Windows.Forms.Label();
+            this.lblEntrenamientos = new System.Windows.Forms.Label();
+            this.lblJuego = new System.Windows.Forms.Label();
+            this.picZonaMarkov = new System.Windows.Forms.PictureBox();
+            this.picZonaSalirResultados = new System.Windows.Forms.PictureBox();
+            this.pnlMarkov.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).BeginInit();
             this.pnlResumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaMarkov)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirResultados)).BeginInit();
-            this.pnlMarkov.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotal.Location = new System.Drawing.Point(243, 227);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(43, 23);
-            this.lblTotal.TabIndex = 0;
-            this.lblTotal.Text = "label1";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEntrenamientos
-            // 
-            this.lblEntrenamientos.BackColor = System.Drawing.Color.Transparent;
-            this.lblEntrenamientos.Location = new System.Drawing.Point(421, 361);
-            this.lblEntrenamientos.Name = "lblEntrenamientos";
-            this.lblEntrenamientos.Size = new System.Drawing.Size(35, 13);
-            this.lblEntrenamientos.TabIndex = 1;
-            this.lblEntrenamientos.Text = "label1";
-            this.lblEntrenamientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblJuego
-            // 
-            this.lblJuego.BackColor = System.Drawing.Color.Transparent;
-            this.lblJuego.Location = new System.Drawing.Point(606, 361);
-            this.lblJuego.Name = "lblJuego";
-            this.lblJuego.Size = new System.Drawing.Size(35, 13);
-            this.lblJuego.TabIndex = 2;
-            this.lblJuego.Text = "label1";
-            this.lblJuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblVictorias
-            // 
-            this.lblVictorias.BackColor = System.Drawing.Color.Transparent;
-            this.lblVictorias.Location = new System.Drawing.Point(426, 233);
-            this.lblVictorias.Name = "lblVictorias";
-            this.lblVictorias.Size = new System.Drawing.Size(35, 13);
-            this.lblVictorias.TabIndex = 3;
-            this.lblVictorias.Text = "label1";
-            this.lblVictorias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDerrotas
-            // 
-            this.lblDerrotas.BackColor = System.Drawing.Color.Transparent;
-            this.lblDerrotas.Location = new System.Drawing.Point(607, 233);
-            this.lblDerrotas.Name = "lblDerrotas";
-            this.lblDerrotas.Size = new System.Drawing.Size(35, 13);
-            this.lblDerrotas.TabIndex = 4;
-            this.lblDerrotas.Text = "label1";
-            this.lblDerrotas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEmpates
-            // 
-            this.lblEmpates.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmpates.Location = new System.Drawing.Point(243, 361);
-            this.lblEmpates.Name = "lblEmpates";
-            this.lblEmpates.Size = new System.Drawing.Size(35, 13);
-            this.lblEmpates.TabIndex = 5;
-            this.lblEmpates.Text = "label1";
-            this.lblEmpates.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvMatriz
-            // 
-            this.dgvMatriz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMatriz.Location = new System.Drawing.Point(12, 3);
-            this.dgvMatriz.Name = "dgvMatriz";
-            this.dgvMatriz.Size = new System.Drawing.Size(240, 150);
-            this.dgvMatriz.TabIndex = 7;
-            this.dgvMatriz.Visible = false;
-            // 
-            // pnlResumen
-            // 
-            this.pnlResumen.BackgroundImage = global::PPT.Properties.Resources.ResultadosResumen;
-            this.pnlResumen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlResumen.Controls.Add(this.flpVector);
-            this.pnlResumen.Controls.Add(this.lblTotal);
-            this.pnlResumen.Controls.Add(this.lblVictorias);
-            this.pnlResumen.Controls.Add(this.lblDerrotas);
-            this.pnlResumen.Controls.Add(this.lblEmpates);
-            this.pnlResumen.Controls.Add(this.lblEntrenamientos);
-            this.pnlResumen.Controls.Add(this.lblJuego);
-            this.pnlResumen.Controls.Add(this.picZonaMarkov);
-            this.pnlResumen.Controls.Add(this.picZonaSalirResultados);
-            this.pnlResumen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlResumen.Location = new System.Drawing.Point(0, 0);
-            this.pnlResumen.Name = "pnlResumen";
-            this.pnlResumen.Size = new System.Drawing.Size(884, 561);
-            this.pnlResumen.TabIndex = 9;
-            // 
-            // flpVector
-            // 
-            this.flpVector.BackColor = System.Drawing.Color.Transparent;
-            this.flpVector.Location = new System.Drawing.Point(404, 421);
-            this.flpVector.Name = "flpVector";
-            this.flpVector.Size = new System.Drawing.Size(430, 60);
-            this.flpVector.TabIndex = 6;
-            this.flpVector.WrapContents = false;
-            // 
-            // picZonaMarkov
-            // 
-            this.picZonaMarkov.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaMarkov.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaMarkov.Location = new System.Drawing.Point(388, 505);
-            this.picZonaMarkov.Name = "picZonaMarkov";
-            this.picZonaMarkov.Size = new System.Drawing.Size(108, 44);
-            this.picZonaMarkov.TabIndex = 1;
-            this.picZonaMarkov.TabStop = false;
-            // 
-            // picZonaSalirResultados
-            // 
-            this.picZonaSalirResultados.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaSalirResultados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picZonaSalirResultados.Location = new System.Drawing.Point(820, 26);
-            this.picZonaSalirResultados.Name = "picZonaSalirResultados";
-            this.picZonaSalirResultados.Size = new System.Drawing.Size(37, 31);
-            this.picZonaSalirResultados.TabIndex = 0;
-            this.picZonaSalirResultados.TabStop = false;
             // 
             // pnlMarkov
             // 
@@ -290,6 +173,15 @@
             this.lblFuegoFuego.Text = "label1";
             this.lblFuegoFuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dgvMatriz
+            // 
+            this.dgvMatriz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatriz.Location = new System.Drawing.Point(12, 3);
+            this.dgvMatriz.Name = "dgvMatriz";
+            this.dgvMatriz.Size = new System.Drawing.Size(240, 150);
+            this.dgvMatriz.TabIndex = 7;
+            this.dgvMatriz.Visible = false;
+            // 
             // picZonaVolverResumen
             // 
             this.picZonaVolverResumen.BackColor = System.Drawing.Color.Transparent;
@@ -310,23 +202,131 @@
             this.picZonaSalirMarkov.TabIndex = 0;
             this.picZonaSalirMarkov.TabStop = false;
             // 
+            // pnlResumen
+            // 
+            this.pnlResumen.BackgroundImage = global::PPT.Properties.Resources.ResultadosResumen;
+            this.pnlResumen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlResumen.Controls.Add(this.flpVector);
+            this.pnlResumen.Controls.Add(this.lblTotal);
+            this.pnlResumen.Controls.Add(this.lblVictorias);
+            this.pnlResumen.Controls.Add(this.lblDerrotas);
+            this.pnlResumen.Controls.Add(this.lblEmpates);
+            this.pnlResumen.Controls.Add(this.lblEntrenamientos);
+            this.pnlResumen.Controls.Add(this.lblJuego);
+            this.pnlResumen.Controls.Add(this.picZonaMarkov);
+            this.pnlResumen.Controls.Add(this.picZonaSalirResultados);
+            this.pnlResumen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlResumen.Location = new System.Drawing.Point(0, 0);
+            this.pnlResumen.Name = "pnlResumen";
+            this.pnlResumen.Size = new System.Drawing.Size(884, 561);
+            this.pnlResumen.TabIndex = 9;
+            // 
+            // flpVector
+            // 
+            this.flpVector.BackColor = System.Drawing.Color.Transparent;
+            this.flpVector.Location = new System.Drawing.Point(404, 421);
+            this.flpVector.Name = "flpVector";
+            this.flpVector.Size = new System.Drawing.Size(430, 60);
+            this.flpVector.TabIndex = 6;
+            this.flpVector.WrapContents = false;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Location = new System.Drawing.Point(243, 227);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(43, 23);
+            this.lblTotal.TabIndex = 0;
+            this.lblTotal.Text = "label1";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblVictorias
+            // 
+            this.lblVictorias.BackColor = System.Drawing.Color.Transparent;
+            this.lblVictorias.Location = new System.Drawing.Point(426, 233);
+            this.lblVictorias.Name = "lblVictorias";
+            this.lblVictorias.Size = new System.Drawing.Size(35, 13);
+            this.lblVictorias.TabIndex = 3;
+            this.lblVictorias.Text = "label1";
+            this.lblVictorias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDerrotas
+            // 
+            this.lblDerrotas.BackColor = System.Drawing.Color.Transparent;
+            this.lblDerrotas.Location = new System.Drawing.Point(607, 233);
+            this.lblDerrotas.Name = "lblDerrotas";
+            this.lblDerrotas.Size = new System.Drawing.Size(35, 13);
+            this.lblDerrotas.TabIndex = 4;
+            this.lblDerrotas.Text = "label1";
+            this.lblDerrotas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEmpates
+            // 
+            this.lblEmpates.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmpates.Location = new System.Drawing.Point(243, 361);
+            this.lblEmpates.Name = "lblEmpates";
+            this.lblEmpates.Size = new System.Drawing.Size(35, 13);
+            this.lblEmpates.TabIndex = 5;
+            this.lblEmpates.Text = "label1";
+            this.lblEmpates.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEntrenamientos
+            // 
+            this.lblEntrenamientos.BackColor = System.Drawing.Color.Transparent;
+            this.lblEntrenamientos.Location = new System.Drawing.Point(421, 361);
+            this.lblEntrenamientos.Name = "lblEntrenamientos";
+            this.lblEntrenamientos.Size = new System.Drawing.Size(35, 13);
+            this.lblEntrenamientos.TabIndex = 1;
+            this.lblEntrenamientos.Text = "label1";
+            this.lblEntrenamientos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblJuego
+            // 
+            this.lblJuego.BackColor = System.Drawing.Color.Transparent;
+            this.lblJuego.Location = new System.Drawing.Point(606, 361);
+            this.lblJuego.Name = "lblJuego";
+            this.lblJuego.Size = new System.Drawing.Size(35, 13);
+            this.lblJuego.TabIndex = 2;
+            this.lblJuego.Text = "label1";
+            this.lblJuego.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picZonaMarkov
+            // 
+            this.picZonaMarkov.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaMarkov.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaMarkov.Location = new System.Drawing.Point(388, 505);
+            this.picZonaMarkov.Name = "picZonaMarkov";
+            this.picZonaMarkov.Size = new System.Drawing.Size(108, 44);
+            this.picZonaMarkov.TabIndex = 1;
+            this.picZonaMarkov.TabStop = false;
+            // 
+            // picZonaSalirResultados
+            // 
+            this.picZonaSalirResultados.BackColor = System.Drawing.Color.Transparent;
+            this.picZonaSalirResultados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picZonaSalirResultados.Location = new System.Drawing.Point(820, 26);
+            this.picZonaSalirResultados.Name = "picZonaSalirResultados";
+            this.picZonaSalirResultados.Size = new System.Drawing.Size(37, 31);
+            this.picZonaSalirResultados.TabIndex = 0;
+            this.picZonaSalirResultados.TabStop = false;
+            // 
             // FrmResultados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.pnlMarkov);
             this.Controls.Add(this.pnlResumen);
+            this.Controls.Add(this.pnlMarkov);
             this.Name = "FrmResultados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultados";
+            this.pnlMarkov.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatriz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).EndInit();
             this.pnlResumen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picZonaMarkov)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirResultados)).EndInit();
-            this.pnlMarkov.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaVolverResumen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picZonaSalirMarkov)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -71,7 +71,6 @@
             // picSeleccionIA
             // 
             this.picSeleccionIA.BackColor = System.Drawing.Color.Transparent;
-            this.picSeleccionIA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picSeleccionIA.Location = new System.Drawing.Point(302, 404);
             this.picSeleccionIA.Name = "picSeleccionIA";
             this.picSeleccionIA.Size = new System.Drawing.Size(70, 70);
@@ -83,7 +82,6 @@
             // picZonaSalir
             // 
             this.picZonaSalir.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaSalir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaSalir.Location = new System.Drawing.Point(447, 386);
             this.picZonaSalir.Name = "picZonaSalir";
@@ -94,7 +92,6 @@
             // picZonaPlanta
             // 
             this.picZonaPlanta.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaPlanta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaPlanta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaPlanta.Location = new System.Drawing.Point(447, 449);
             this.picZonaPlanta.Name = "picZonaPlanta";
@@ -105,7 +102,6 @@
             // picZonaAgua
             // 
             this.picZonaAgua.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaAgua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaAgua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaAgua.Location = new System.Drawing.Point(665, 449);
             this.picZonaAgua.Name = "picZonaAgua";
@@ -116,7 +112,6 @@
             // picZonaFuego
             // 
             this.picZonaFuego.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaFuego.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaFuego.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaFuego.Location = new System.Drawing.Point(665, 386);
             this.picZonaFuego.Name = "picZonaFuego";

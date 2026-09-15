@@ -57,7 +57,6 @@
             // picZonaSalirMenu
             // 
             this.picZonaSalirMenu.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaSalirMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaSalirMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaSalirMenu.Location = new System.Drawing.Point(815, 22);
             this.picZonaSalirMenu.Name = "picZonaSalirMenu";
@@ -68,7 +67,6 @@
             // picZonaResultados
             // 
             this.picZonaResultados.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaResultados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaResultados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaResultados.Location = new System.Drawing.Point(203, 393);
             this.picZonaResultados.Name = "picZonaResultados";
@@ -79,7 +77,6 @@
             // picZonaJugar
             // 
             this.picZonaJugar.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaJugar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaJugar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaJugar.Location = new System.Drawing.Point(203, 292);
             this.picZonaJugar.Name = "picZonaJugar";
@@ -90,7 +87,6 @@
             // picZonaEntrenar
             // 
             this.picZonaEntrenar.BackColor = System.Drawing.Color.Transparent;
-            this.picZonaEntrenar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picZonaEntrenar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picZonaEntrenar.Location = new System.Drawing.Point(203, 191);
             this.picZonaEntrenar.Name = "picZonaEntrenar";
