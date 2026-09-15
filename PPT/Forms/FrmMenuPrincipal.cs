@@ -78,27 +78,43 @@ namespace PPT.Forms
         }
         private void ZonaEntrenar_Click(object sender, EventArgs e)
         {
+            Hide();
+
             using (FrmBatalla batalla =
-                new FrmBatalla(contexto, ModoBatalla.Entrenamiento))
+                new FrmBatalla(
+                    contexto,
+                    ModoBatalla.Entrenamiento))
             {
                 batalla.ShowDialog();
             }
+
+            Show();
         }
         private void ZonaJugar_Click(object sender, EventArgs e)
         {
+            Hide();
+
             using (FrmBatalla batalla =
-                new FrmBatalla(contexto, ModoBatalla.Juego))
+                new FrmBatalla(
+                    contexto,
+                    ModoBatalla.Juego))
             {
                 batalla.ShowDialog();
             }
+
+            Show();
         }
         private void ZonaResultados_Click(object sender, EventArgs e)
         {
-            using (FrmResultados resultados = new FrmResultados(contexto))
+            Hide();
 
+            using (FrmResultados resultados =
+                new FrmResultados(contexto))
             {
                 resultados.ShowDialog();
             }
+
+            Show();
         }
         private void ZonaSalirMenu_Click(object sender, EventArgs e)
         {

@@ -71,6 +71,7 @@ namespace PPT
             posicionesBaseBatalla.Add(
                 picSeleccionIA,
                 picSeleccionIA.Bounds);
+
             posicionesBaseBatalla.Add(
                 picResultadoRonda,
                 picResultadoRonda.Bounds);
@@ -119,6 +120,7 @@ namespace PPT
                 picSeleccionIA,
                 escalaX,
                 escalaY);
+
             EscalarControlBatalla(
                 picResultadoRonda,
                 escalaX,

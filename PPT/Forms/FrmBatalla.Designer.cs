@@ -77,7 +77,6 @@
             this.picSeleccionIA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSeleccionIA.TabIndex = 4;
             this.picSeleccionIA.TabStop = false;
-            this.picSeleccionIA.Visible = false;
             // 
             // picZonaSalir
             // 
@@ -122,10 +121,10 @@
             // picResultadoRonda
             // 
             this.picResultadoRonda.BackColor = System.Drawing.Color.Transparent;
-            this.picResultadoRonda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picResultadoRonda.Location = new System.Drawing.Point(210, 182);
             this.picResultadoRonda.Name = "picResultadoRonda";
             this.picResultadoRonda.Size = new System.Drawing.Size(464, 94);
+            this.picResultadoRonda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picResultadoRonda.TabIndex = 5;
             this.picResultadoRonda.TabStop = false;
             this.picResultadoRonda.Visible = false;
